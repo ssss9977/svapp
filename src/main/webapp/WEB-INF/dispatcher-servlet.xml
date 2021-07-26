@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+		<!-- 컨트롤러 매핑 -->
+    <bean id="/index" class="com.springprj.svapp.controller.IndexController">
+    	<property name="productService" ref="productService" />
+    </bean>
+    <bean id="/Hotel/hotelList" class="com.springprj.svapp.controller.HotelController">
+    	<property name="productService" ref="productService" />
+    </bean>
+    <bean id="/Hotel/hotelDetail" class="com.springprj.svapp.controller.DetailController">
+    	<property name="productService" ref="productService" />
+    </bean>
+    <bean id="/Hotel/confirmPage" class="com.springprj.svapp.controller.ConfirmController">
+    	<property name="productService" ref="productService" />
+    </bean>
+
+		<bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+			<property name="definitions" value="/WEB-INF/tiles.xml" />
+		</bean>
+    
+    <!-- viewResolver 반복문 제거 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    	<property name="prefix" value="/WEB-INF/view/"></property>
+    	<property name="suffix" value=".jsp"></property>
+    	<property name="order" value="1" />
+    </bean>
+		
+		<!-- resources 파일 매핑 -->
+		<mvc:resources location="/static/" mapping="/**"></mvc:resources>
+		
+		<!-- service객체 ioc컨테이너에 담기 -->
+		<bean id="productService" class="com.springprj.svapp.service.ProductService" />
+		
+</beans>

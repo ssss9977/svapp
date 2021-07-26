@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100;300;400&display=swap');
+
+a:hover{
+	text-decoration: none;
+}
+
+#top_title{
+	font-family: 'Black Han Sans', sans-serif;
+	font-size: 42pt;
+	text-align: center;
+	
+}
+
+.content_1p {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 18pt;
+	text-align:center; vertical-align:middle;
+	padding-top: 5px;
+}
+
+
+	

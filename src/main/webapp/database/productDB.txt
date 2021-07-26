@@ -1,0 +1,32 @@
+create table sb_hotel(
+hotelId number(4) primary key,
+hotelName varchar2(50) not null,
+hotelAdd varchar2(100) not null,
+hotelPrice number(10) not null,
+hotelLimit number(2) not null,
+hotelImg varchar2(30),
+hotelBest number(1) default 0 not null,
+hotelSection varchar2(15)
+);
+
+desc sb_hotel;
+
+Insert into sb_hotel values(1000, '해비치호텔', '제주특별자치도 서귀포시 표선면 표선리 40-69', 551600, 2, '해비치호텔', 1, '호텔');
+Insert into sb_hotel values(1001, '제주신라호텔', '서귀포시 색달동 3039-3', 165290, 2, '제주신라호텔', 1, '호텔');
+Insert into sb_hotel values(1002, '롯데호텔제주', '제주특별자치도 서귀포시 중문관광로 72번길 35', 219000, 2, '롯데호텔제주', 1, '호텔');
+
+Insert into sb_hotel values(2000, '호텔시리우스', '제주특별자치도 제주시 도령로 133', 69900, 2, '호텔시리우스', 0, '호텔');
+Insert into sb_hotel values(1003, '골든데이지 서귀포오션', '제주도 서귀포시 동홍로 7', 69900, 2, '골든데이지서귀포오션', 0, '호텔');
+Insert into sb_hotel values(1004, '칼호텔', '제주도 서귀포시 칠십리로 242', 99900, 2, '칼호텔', 0, '호텔');
+Insert into sb_hotel values(1005, '코업시티호텔하버뷰', '제주도 서귀포시 남원읍 태위로 108', 42980, 2, '코업시티호텔하버뷰', 0, '호텔');
+Insert into sb_hotel values(1006, '그랜드 하얏트 제주', '제주특별자치도 제주시 노연로 12', 120980, 2, '그랜드하얏트제주', 0, '호텔');
+Insert into sb_hotel values(1007, '그랜드조선 제주', '제주특별자치도 서귀포시 중문관광로 72번길 60', 245000, 2, '그랜드조선제주', 0, '호텔');
+Insert into sb_hotel values(1008, '휘닉스아일랜드', '제주특별자치도 서귀포시 성산읍 고성리 127-2번지', 162000, 2, '휘닉스아일랜드', 0, '호텔');
+Insert into sb_hotel values(1009, '담앤루리조트', '제주특별자치도 서귀포시 이어도로343번길 63', 123900, 5, '담앤루리조트', 0, '리조트');
+Insert into sb_hotel values(1010, '스위트호텔', '제주특별자치도 서귀포시 색달동 2812-10', 89700, 2, '스위트호텔', 0, '호텔');
+Insert into sb_hotel values(1011, '소노캄제주리조트', '제주특별자치도 서귀포시 표선면 일주동로 6347-17', 148000, 6, '소노캄제주리조트', 0, '리조트');
+Insert into sb_hotel values(1012, '제주 아띠랑스', '제주특별자치도 서귀포시 성산읍 해맞이해안로 2614', 83000, 2, '제주아띠랑스', 0, '호텔');
+Insert into sb_hotel values(1013, '토스카나', '제주특별자치도 서귀포시 용흥로 66번길 158-7', 514000, 2, '토스카나', 0, '호텔');
+Insert into sb_hotel values(1014, 'WE호텔', '제주특별자치도 서귀포시 1100로 453-95', 151000, 2, 'WE호텔', 0, '호텔');
+
+select * from sb_hotel;
