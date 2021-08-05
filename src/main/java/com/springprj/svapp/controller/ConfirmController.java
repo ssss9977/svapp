@@ -11,13 +11,13 @@ import org.springframework.web.servlet.mvc.Controller;
 
 import com.springprj.svapp.entity.Pager;
 import com.springprj.svapp.entity.ProductHotel;
-import com.springprj.svapp.service.ProductService;
+import com.springprj.svapp.service.jdbc.JDBCProductService;
 
 public class ConfirmController implements Controller {
 	
-	private ProductService productService;
+	private JDBCProductService productService;
 	
-	public void setProductService(ProductService productService) {
+	public void setProductService(JDBCProductService productService) {
 		this.productService = productService;
 	}
 

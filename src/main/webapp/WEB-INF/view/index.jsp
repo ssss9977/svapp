@@ -130,14 +130,30 @@
 <div class="Enter"></div>
 <!-- MD추천 숙소 끝-->
 <div class="content_1">
-	<p class="content_1p">MD추천-펜션</p>
+	<p class="content_1p">MD추천-리조트</p>
 	<div class="hotellAllMenu">
 		<a href="/svapp/Hotel/hotelList?page=&name=&priceType=&hotelType=">
 			<p class="allMenu_p">+ 전체보기</p>
 		</a>
 	</div>
 </div>
-
+<div class="container">
+	<div class="row">
+		<c:forEach var="H" items="${list }">
+			<div class="col-md-4">
+				<div class="card" style="width: 18rem;">
+				  <img src="./images/${H.hotelImg }.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title"><b>${H.hotelName}</b></h5>
+				    <p class="card-text">${H.hotelAdd }</p>
+				    <p class="card-text"><b>${H.hotelPrice }원</b></p>
+				    <a href="/svapp/Hotel/hotelDetail?no=${H.hotelId }" class="btn btn-danger"><b style="color: white;">예약하기</b></a>
+				  </div>
+				</div>
+			</div>
+		</c:forEach>
+	</div>
+</div>
 
 <!-- footer -->
 <jsp:include page="./footer.jsp"></jsp:include>

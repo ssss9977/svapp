@@ -36,6 +36,15 @@
 		<mvc:resources location="/static/" mapping="/**"></mvc:resources>
 		
 		<!-- service객체 ioc컨테이너에 담기 -->
-		<bean id="productService" class="com.springprj.svapp.service.ProductService" />
+		<bean id="productService" class="com.springprj.svapp.service.jdbc.JDBCProductService">
+			<property name="dataSource" ref="dataSource" />
+		</bean>
+		
+		<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+			<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+			<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:XE" />
+			<property name="username" value="system"/>
+			<property name="password" value="1234" />
+		</bean>
 		
 </beans>
